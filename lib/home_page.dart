@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myporto/porto_page.dart';
 
-import 'blank.dart';
+// import 'blank.dart';
 import 'widget/tombol.dart';
 import 'constant/AboutMe.dart';
 
@@ -17,18 +17,19 @@ class HomePage extends StatelessWidget {
       body: ListView(children: [
         Row(
           children: [
+            
             Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 80, vertical: 70),
                 width: Get.width / 2,
-                height: Get.height,
+                height: 650,
                 color: Colors.grey[400],
                 child: Kiri()),
             Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 80, vertical: 70),
                 width: Get.width / 2,
-                height: Get.height,
+                height: 650,
                 color: Colors.white,
                 child: Kanan(onTap: (){
                   // cont.jumpTo(cont.position.maxScrollExtent);
@@ -64,7 +65,7 @@ class Kiri extends StatelessWidget {
         Text(
           "Rizky Nur Hidayat",
           style:
-              GoogleFonts.openSans(fontSize: 40, fontWeight: FontWeight.bold),
+              GoogleFonts.openSans(fontSize: 38, fontWeight: FontWeight.bold),
         ),
         const Spacer(flex: 1),
         Text(

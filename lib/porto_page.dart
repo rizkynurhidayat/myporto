@@ -15,7 +15,7 @@ class PortoPage extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 50),
       width: Get.width,
-      height: Get.height,
+      height: 650,
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,21 +41,21 @@ class PortoPage extends StatelessWidget {
                 ProjectWidget(
                   p: p1,
                   onTap: () {
-                    Get.to(() => BlankPage());
+                    Get.to(() => BlankPage(p: p1,));
                   },
                 ),
                 const SizedBox(width: 20,),
                 ProjectWidget(
                   p: p2,
                   onTap: () {
-                    Get.to(() => BlankPage());
+                    Get.to(() => BlankPage(p: p2,));
                   },
                 ),
                 const SizedBox(width: 20,),
                 ProjectWidget(
                   p: p3,
                   onTap: () {
-                    Get.to(() => BlankPage());
+                    Get.to(() => BlankPage(p: p3,));
                   },
                 ),
                 // const SizedBox(width: 20,),

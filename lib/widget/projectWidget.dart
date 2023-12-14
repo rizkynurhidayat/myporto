@@ -34,7 +34,7 @@ class ProjectWidget extends StatelessWidget {
               ),
               SizedBox(
                 height: 80,
-                child: Text(p.description),
+                child: Text(p.description, overflow: TextOverflow.ellipsis, maxLines: 4,),
               ),
               // tombol(
               //     title: "Lihat Detail",
@@ -44,11 +44,11 @@ class ProjectWidget extends StatelessWidget {
               Row(children: [
                     tombol(title: "Figma", fontsize: 14, onTap: (){
                       OpenLink(Uri.parse(p.figmaLink));
-                    }, width: 150),
+                    }, width: (Get.width/5) -100),
                     const SizedBox(width: 10,),
                     tombol(title: "Repo", fontsize: 14, onTap: (){
                       OpenLink(Uri.parse(p.sourceCodeLink));
-                    }, width: 150),
+                    }, width: (Get.width/5) -100),
                   ],)
             ],
           ),
