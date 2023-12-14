@@ -46,3 +46,4 @@ var whatsapp = Uri.parse("https://api.whatsapp.com/send/?phone=6281534922048&tex
 var instagram = Uri.parse("https://www.instagram.com/rzky828/");
 var github = Uri.parse("https://github.com/rizkynurhidayat");
 var resume = Uri.parse("https://drive.google.com/file/d/1AeMKhNhdQiKHSkl74lVuPwNbWavhkaTf/view?usp=sharing");
+var linkedin = Uri.parse("https://www.linkedin.com/in/rizky-nur-hidayat-552b98214");

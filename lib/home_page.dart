@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final ScrollController cont;
+     final porto = GlobalKey();
     return Scaffold(
       body: ListView(children: [
         Row(
@@ -32,10 +32,11 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 child: Kanan(onTap: (){
                   // cont.jumpTo(cont.position.maxScrollExtent);
+                  Scrollable.ensureVisible(porto.currentContext!, duration: Duration(seconds: 1), curve: Curves.easeIn);
                 },)),
           ],
         ),
-        PortoPage(key: Key('porto'),)
+        PortoPage(key: porto,)
       ]),
     );
   }
@@ -112,7 +113,8 @@ class Kiri extends StatelessWidget {
                     height: 34, width: 34)),
             TextButton(
                 onPressed: () {
-                  Get.to(BlankPage());
+                  // Get.to(BlankPage());
+                  OpenLink(linkedin);
                 },
                 child: Image.asset("assets/images/linkedin.png",
                     height: 34, width: 34)),

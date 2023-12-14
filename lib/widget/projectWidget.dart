@@ -36,11 +36,20 @@ class ProjectWidget extends StatelessWidget {
                 height: 80,
                 child: Text(p.description),
               ),
-              tombol(
-                  title: "Lihat Detail",
-                  fontsize: 14,
-                  onTap: onTap,
-                  width: Get.width / 4)
+              // tombol(
+              //     title: "Lihat Detail",
+              //     fontsize: 14,
+              //     onTap: onTap,
+              //     width: Get.width / 4),
+              Row(children: [
+                    tombol(title: "Figma", fontsize: 14, onTap: (){
+                      OpenLink(Uri.parse(p.figmaLink));
+                    }, width: 150),
+                    const SizedBox(width: 10,),
+                    tombol(title: "Repo", fontsize: 14, onTap: (){
+                      OpenLink(Uri.parse(p.sourceCodeLink));
+                    }, width: 150),
+                  ],)
             ],
           ),
         ),
