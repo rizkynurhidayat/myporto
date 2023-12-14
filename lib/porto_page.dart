@@ -58,13 +58,13 @@ class PortoPage extends StatelessWidget {
                     Get.to(() => BlankPage());
                   },
                 ),
-                const SizedBox(width: 20,),
-                ProjectWidget(
-                  p: p3,
-                  onTap: () {
-                    Get.to(() => BlankPage());
-                  },
-                ),
+                // const SizedBox(width: 20,),
+                // ProjectWidget(
+                //   p: p3,
+                //   onTap: () {
+                //     Get.to(() => BlankPage());
+                //   },
+                // ),
               ],
             ),
           )
