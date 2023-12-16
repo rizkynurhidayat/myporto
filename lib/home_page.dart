@@ -66,6 +66,7 @@ class Kiri extends StatelessWidget {
           "Rizky Nur Hidayat",
           style:
               GoogleFonts.openSans(fontSize: 38, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
         ),
         const Spacer(flex: 1),
         Text(
@@ -81,7 +82,7 @@ class Kiri extends StatelessWidget {
             },
             title: "Email Me",
             fontsize: 14,
-            width: Get.width / 2 - 50),
+            width: (Get.width>700)?Get.width / 2 - 50: Get.width),
         const Spacer(flex: 2),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -143,14 +144,14 @@ final void Function()? onTap;
           height: 30,
         ),
         SizedBox(
-          width: Get.width / 2 - 100,
+          width: (Get.width >700)?Get.width / 2 - 100 : Get.width,
           child: Text(
             deskripsiAbout,
             style: teks.copyWith(fontSize: 18),
           ),
         ),
         Spacer(),
-        Row(
+        (Get.width>700)?Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             tombol(
@@ -166,7 +167,23 @@ final void Function()? onTap;
                 onTap: onTap,
                 width: Get.width / 4 - 100),
           ],
-        )
+        ) : Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+          tombol(
+                title: "Resume",
+                fontsize: 12,
+                onTap: () {
+                  OpenLink(resume);
+                },
+                width: Get.width ),
+                SizedBox(height: 20,),
+            tombol(
+                title: "Portofolio",
+                fontsize: 12,
+                onTap: onTap,
+                width: Get.width ),
+        ],)
       ],
     );
   }

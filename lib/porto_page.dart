@@ -41,21 +41,31 @@ class PortoPage extends StatelessWidget {
                 ProjectWidget(
                   p: p1,
                   onTap: () {
-                    Get.to(() => BlankPage(p: p1,));
+                    Get.to(() => BlankPage(
+                          p: p1,
+                        ));
                   },
                 ),
-                const SizedBox(width: 20,),
+                const SizedBox(
+                  width: 20,
+                ),
                 ProjectWidget(
                   p: p2,
                   onTap: () {
-                    Get.to(() => BlankPage(p: p2,));
+                    Get.to(() => BlankPage(
+                          p: p2,
+                        ));
                   },
                 ),
-                const SizedBox(width: 20,),
+                const SizedBox(
+                  width: 20,
+                ),
                 ProjectWidget(
                   p: p3,
                   onTap: () {
-                    Get.to(() => BlankPage(p: p3,));
+                    Get.to(() => BlankPage(
+                          p: p3,
+                        ));
                   },
                 ),
                 // const SizedBox(width: 20,),
@@ -69,6 +79,83 @@ class PortoPage extends StatelessWidget {
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class PortoPageMob extends StatelessWidget {
+  const PortoPageMob({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: Get.width,
+     padding: EdgeInsets.symmetric(horizontal: 40, vertical: 50),
+     height: 800,
+     color: Colors.white,
+      child: Scaffold(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+          Text(
+            "portofolio",
+            style: teks.copyWith(
+              fontSize: 18,
+            ),
+          ),
+          Text(
+            "Project",
+            style: teks.copyWith(fontSize: 52, fontWeight: FontWeight.w900),
+          ),
+           SingleChildScrollView(
+            
+              scrollDirection: Axis.horizontal,
+              child: Row(
+
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ProjectWidget(
+                    p: p1,
+                    onTap: () {
+                      Get.to(() => BlankPage(
+                            p: p1,
+                          ));
+                    },
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  ProjectWidget(
+                    p: p2,
+                    onTap: () {
+                      Get.to(() => BlankPage(
+                            p: p2,
+                          ));
+                    },
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  ProjectWidget(
+                    p: p3,
+                    onTap: () {
+                      Get.to(() => BlankPage(
+                            p: p3,
+                          ));
+                    },
+                  ),
+                  // const SizedBox(width: 20,),
+                  // ProjectWidget(
+                  //   p: p3,
+                  //   onTap: () {
+                  //     Get.to(() => BlankPage());
+                  //   },
+                  // ),
+                ],
+              ),
+            )
+        ]),
       ),
     );
   }

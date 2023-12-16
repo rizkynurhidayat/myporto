@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myporto/home_page_mob.dart';
 import 'home_page.dart';
 
 // import 'home_page.dart';
@@ -21,14 +22,14 @@ class MyApp extends StatelessWidget {
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey)),
-      home: FutureBuilder(future: Future.delayed(Duration(seconds: 3)), builder: (context, snapshot){
+      home: FutureBuilder(future: Future.delayed(const Duration(seconds: 3)), builder: (context, snapshot){
         if(snapshot.connectionState == ConnectionState.waiting){
-          return Center(child: CircularProgressIndicator(),);
+          return const Center(child: CircularProgressIndicator(),);
         }
         if(Get.width >= 700){
-          return HomePage();
+          return const HomePage();
         }
-        return Center(child: Text("Please Use Desktop Mode !!! "),);
+        return const HomePageMob();
       })
     );
   }
